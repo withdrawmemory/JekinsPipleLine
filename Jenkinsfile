@@ -41,6 +41,7 @@ pipeline {
 		success{
 			script{
 				echo("success")
+				currentBuild.description += "\n 构建成功"
 			}
 		}
 		failure{
