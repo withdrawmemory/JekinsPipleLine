@@ -1,5 +1,11 @@
 pipeline {
-    agent any
+    //agent any
+	agent {
+		nod { 
+			labe "master" //指定运行节点的标签或者名称
+			customWorkspace "${workspace}"	//指定运行工具目录(可选)
+		}
+	}
 	options {
 		timestamps()	//显示日志时间
 		skipDefaultCheckout()	//删除隐式checkout scm语句
@@ -12,7 +18,7 @@ pipeline {
             steps {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
-					 echo("获取代码")
+					 echo("Stage GetCode")
 					}
 				}
             }
@@ -22,7 +28,7 @@ pipeline {
             steps {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
-					 echo("构建代码")
+					 echo("Stage BuildCode")
 					}
 				}
             }
@@ -32,7 +38,7 @@ pipeline {
             steps {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
-					 echo("扫描代码")
+					 echo("Stage ScanCode")
 					}
 				}
             }
