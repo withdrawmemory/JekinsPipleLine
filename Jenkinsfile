@@ -1,4 +1,4 @@
-def tools = load "/groovy/tools.groovy"
+def tools =  load("${env.WORKSPACE}/groovy/tools.groovy")
 
 pipeline {
     agent any
