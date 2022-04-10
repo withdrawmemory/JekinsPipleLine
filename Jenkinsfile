@@ -13,7 +13,7 @@ pipeline {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
 					 echo("Stage GetCode")
-					 echo(${params.testStr})
+					 echo(params.testStr)
 					 //def tools =  load("${env.WORKSPACE}/groovy/tools.groovy")
 					 //tools:PrintMsg("test Tool Func")
 					}
