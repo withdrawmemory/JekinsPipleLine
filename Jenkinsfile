@@ -1,4 +1,4 @@
-def tools = new src.org.devops.tools()
+import src.org.devops.tools
 
 pipeline {
     agent any
