@@ -1,5 +1,3 @@
-def tools =  load("${env.WORKSPACE}/groovy/tools.groovy")
-
 pipeline {
     agent any
 	options {
@@ -15,6 +13,7 @@ pipeline {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
 					 echo("Stage GetCode")
+					 def tools =  load("${env.WORKSPACE}/groovy/tools.groovy")
 					 tools.PrintMsg("test Tool Func")
 					}
 				}
