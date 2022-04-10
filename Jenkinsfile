@@ -1,4 +1,4 @@
-def tools = load "/etc/ansible/test/${JOB_NAME}.groovy"
+def tools = load "/groovy/tools.groovy"
 
 pipeline {
     agent any
