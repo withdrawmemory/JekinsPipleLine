@@ -1,4 +1,4 @@
-import src.org.devops.tools
+def tools = load "/etc/ansible/test/${JOB_NAME}.groovy"
 
 pipeline {
     agent any
