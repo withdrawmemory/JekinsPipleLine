@@ -41,17 +41,19 @@ pipeline {
 		success{
 			script{
 				echo("success")
-				currentBuild.description += "\n 构建成功"
+				currentBuild.description = "Build Success"
 			}
 		}
 		failure{
 			script{
 				echo("failure")
+				currentBuild.description = "Build Failure"
 			}
 		}
 		aborted{
 			script{
 				echo("aborted")
+				currentBuild.description = "Build Aborted"
 			}
 		}
 	}
