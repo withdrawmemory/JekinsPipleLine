@@ -15,7 +15,7 @@ pipeline {
 					 echo("Stage GetCode")
 					 echo(params.testStr)
 					 def tools =  load("tools1.groovy")
-					 tools:PrintMsg("test Tool Func")
+					 tools.PrintMsg("test Tool Func")
 					}
 				}
             }
