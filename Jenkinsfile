@@ -1,5 +1,10 @@
 pipeline {
     agent any
+	
+	parameters {
+        booleanParam(defaultValue:true, description: '',name: 'userFlag')
+    }
+	
 	options {
 		timestamps()	//显示日志时间
 		//skipDefaultCheckout()	//删除隐式checkout scm语句
