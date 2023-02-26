@@ -31,6 +31,7 @@ pipeline {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
 					 echo("Stage BuildCode")
+					  sh ("ping baidu.com")
 					}
 				}
             }
