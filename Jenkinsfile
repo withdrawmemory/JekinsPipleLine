@@ -3,7 +3,7 @@ pipeline {
 	
 	parameters {
         booleanParam(defaultValue:true, description: '',name: 'userFlag')
-		parameters { choice(name: 'choiceParam', choices: ['one', 'two', 'three'], description: '') }
+		choice(name: 'choiceParam', choices: ['one', 'two', 'three'], description: '')
     }
 	
 	options {
