@@ -3,6 +3,7 @@ pipeline {
 	
 	parameters {
         booleanParam(defaultValue:true, description: '',name: 'userFlag')
+		parameters { choice(name: 'choiceParam', choices: ['one', 'two', 'three'], description: '') }
     }
 	
 	options {
@@ -30,8 +31,14 @@ pipeline {
             steps {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
-					 echo("Stage BuildCode")
-					  sh ("ping baidu.com")
+					 echo("Stage GetCode")
+					 echo "第一个参数$userFlag\n第二个参数$choiceParam"
+					 sh '''
+					    echo "$userFlag"
+					    ping 'baidu.com'
+					 '''
+					 echo("%userFlag")
+					 echo("End Stage GetCode")
 					}
 				}
             }
