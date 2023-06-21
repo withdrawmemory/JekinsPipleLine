@@ -46,11 +46,7 @@ pipeline {
 		//扫描代码
 		stage('ScanCode') {
             steps {
-				timeout(time:5, unit:"MINUTES"){
-					script { 
-					 echo("Stage ScanCode")
-					}
-				}
+				 archiveArtifacts artifacts: '**/*.groovy', fingerprint: true 
             }
         }
     }
