@@ -36,7 +36,7 @@ pipeline {
 					 def logFile = "test.Log"
 					 sh """
 					    echo "Log Path is ${logFile}"
-						python -c - u "import LogHelper; LogHelper.SaveLog(${logFile})"
+						python -c -u "import LogHelper; LogHelper.SaveLog(${logFile})"
 					 """
 					 echo("%userFlag")
 					 echo("End Stage GetCode")
