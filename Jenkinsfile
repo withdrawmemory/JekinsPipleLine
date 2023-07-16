@@ -33,10 +33,10 @@ pipeline {
 					script { 
 					 echo("Stage GetCode")
 					 echo "第一个参数$userFlag\n第二个参数$choiceParam"
-					 sh '''
-					    echo "$userFlag"
-					    ping 'baidu.com'
-					 '''
+					 def logFile = "test.Log"
+					 sh """
+					    echo "Log Path is ${logFile}"
+					 """
 					 echo("%userFlag")
 					 echo("End Stage GetCode")
 					}
