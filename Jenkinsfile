@@ -32,7 +32,7 @@ pipeline {
 				timeout(time:5, unit:"MINUTES"){
 					script { 
 					 echo("Stage GetCode")
-					 echo "第一个参数$userFlag\n第二个参数$choiceParam"
+					 echo "One args:$userFlag\n Two args:$choiceParam"
 					 def logFile = "test.Log"
 					 sh """
 					    echo "Log Path is ${logFile}"
