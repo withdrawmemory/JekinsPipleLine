@@ -1,7 +1,8 @@
 import time
 
-def SaveLog(saveName):
-    # print("save path is", saveName)
+def SaveLog():
+    saveName = "test.Log"
+    print("save path is", saveName)
     #写入文件，二进制的方式
     file = open(saveName, 'wb')
     file.write("测试\n".encode("UTF-8"))
