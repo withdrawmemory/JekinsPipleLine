@@ -1,6 +1,7 @@
 import time
 
-def SaveLog(saveName):
+def SaveLog():
+    saveName = "test.Log"
     print("save path is", saveName)
     #写入文件，二进制的方式
     file = open(saveName, 'wb')
