@@ -9,6 +9,7 @@ def SaveLog(saveName):
     file.write(localtime.encode("UTF-8"))
     file.close()
     
-def PrintLog():
-    print("PrintLog")
+def PrintLog(saveName):
+    print("PrintLog", saveName)
+    
    
