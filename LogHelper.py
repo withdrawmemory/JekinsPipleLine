@@ -8,3 +8,7 @@ def SaveLog(saveName):
     localtime = "当前时间：" + str(time.localtime(time.time()))
     file.write(localtime.encode("UTF-8"))
     file.close()
+    
+def PrintLog():
+    print("PrintLog")
+   
