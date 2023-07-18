@@ -47,7 +47,7 @@ pipeline {
 		//扫描代码
 		stage('ScanCode') {
             steps {
-				 archiveArtifacts artifacts: '**/*.groovy', fingerprint: true 
+				 archiveArtifacts artifacts: 'test.Log', fingerprint: true 
             }
         }
     }
